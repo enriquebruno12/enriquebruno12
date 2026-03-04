@@ -1,7 +1,6 @@
-<!-- Banner (no file needed) -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&text=Enrique%20Soares&fontAlign=50&fontAlignY=35&desc=Data%20Analytics%20%7C%20BI%20%26%20Automation&descAlign=50&descAlignY=55" />
-</p>
+<!-- =========================
+     Enrique Soares — Profile README
+     ========================= -->
 
 <p align="center">
   <a href="https://github.com/enriquebruno12">
@@ -24,55 +23,75 @@
 I’m a **Data Analyst / BI & Automation** with a background in **Electrical Engineering**.  
 I build **dashboards, KPI reporting, and automation** that turn operational data into decisions.
 
-- 🎯 Focus: **Analytics + BI + Process optimization**
-- 🧠 Studying: **Higher Diploma in Data Analytics (2025–2026)**
-- 🧩 I like: **clean models, clear metrics, and repeatable reporting**
+- 🎯 Focus: Analytics + BI + Process optimization  
+- 🧠 Studying: Higher Diploma in Data Analytics (2025–2026)  
+- 🧩 I like: clean models, clear metrics, repeatable reporting  
 
 ---
 
 ## 🧰 Tech stack
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,postgres,aws,docker,git,github,vscode,azure" />
-  </a>
+  <img src="https://skillicons.dev/icons?i=python,postgres,aws,docker,git,github,vscode,azure" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Power%20BI-KPIs%20%26%20Storytelling-F2C811?style=for-the-badge&logo=powerbi&logoColor=000"/>
-  <img src="https://img.shields.io/badge/Power%20Platform-Automation%20%26%20Apps-742774?style=for-the-badge&logo=powerapps&logoColor=fff"/>
+  <img src="https://img.shields.io/badge/Power%20BI-Dashboards%20and%20KPIs-F2C811?style=for-the-badge&logo=powerbi&logoColor=000"/>
+  <img src="https://img.shields.io/badge/Power%20Platform-Automation%20and%20Apps-742774?style=for-the-badge&logo=powerapps&logoColor=fff"/>
 </p>
 
 ---
 
 ## 📚 What I'm working on (college)
-- 🧱 Data warehousing & **dimensional modeling** (star schema)
-- 🧮 **SQL** (constraints, joins, performance basics)
-- 🐍 **Python** (pandas, automation, data quality checks)
-- 📊 **Power BI** (Power Query, DAX, UX, storytelling)
+- 🧱 Data warehousing & dimensional modeling (star schema)  
+- 🧮 SQL (constraints, joins, performance basics)  
+- 🐍 Python (pandas, automation, data quality checks)  
+- 📊 Power BI (Power Query, DAX, UX, storytelling)  
 
 ---
 
 ## 🗺️ Project architecture (figure)
-mermaid
+
+```mermaid
 flowchart LR
-  A[Raw data] --> B[Staging / Cleaning]
-  B --> C[DW (Star Schema)]
-  C --> D[Power BI semantic model]
-  D --> E[Dashboards + KPI storytelling]
-  D --> F[Automated refresh / reporting]
+  A["Raw data"] --> B["Staging & Cleaning"]
+  B --> C["DW (Star Schema)"]
+  C --> D["Power BI semantic model"]
+  D --> E["Dashboards & KPI storytelling"]
+  D --> F["Automated refresh & reporting"]
+```
 
-📊 GitHub analytics (graphs)
-<p align="center"> <img height="165" src="https://github-readme-stats.vercel.app/api?username=enriquebruno12&show_icons=true&include_all_commits=true&hide_title=true&theme=tokyonight" /> <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=enriquebruno12&layout=compact&langs_count=8&size_weight=0.5&count_weight=0.5&theme=tokyonight" /> </p> <p align="center"> <img height="165" src="https://streak-stats.demolab.com/?user=enriquebruno12&theme=tokyonight&hide_border=true" /> </p> <p align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=enriquebruno12&theme=tokyo-night&hide_border=true" /> </p>
+---
 
-⭐ Featured projects
+## ⭐ Featured projects
 
-Replace REPO_1..REPO_4 with your real repo names.
+- 📌 **ccda-data-mining**  
+  Data mining tools/techniques and practice repo  
+  Repo: https://github.com/enriquebruno12/ccda-data-mining
 
-<p align="center"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=enriquebruno12&repo=REPO_1&theme=tokyonight" /> <img src="https://github-readme-stats.vercel.app/api/pin/?username=enriquebruno12&repo=REPO_2&theme=tokyonight" /> </p> <p align="center"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=enriquebruno12&repo=REPO_3&theme=tokyonight" /> <img src="https://github-readme-stats.vercel.app/api/pin/?username=enriquebruno12&repo=REPO_4&theme=tokyonight" /> </p>
-🧩 Highlights (what I’ve built)
+- 🎮 **vgsales-data-project**  
+  End-to-end analytics project with VG sales dataset  
+  Repo: https://github.com/enriquebruno12/vgsales-data-project
+
+- 🤖 **ccda-applied-machine-learning**  
+  Applied ML notebooks and experiments  
+  Repo: https://github.com/enriquebruno12/ccda-applied-machine-learning
+
+- 🧱 **ccda-bi-and-data-warehousing**  
+  BI + DW modules and deliverables  
+  Repo: https://github.com/enriquebruno12/ccda-bi-and-data-warehousing
+
+---
+
+## 🧩 Highlights (what I’ve built)
 
 📈 AWS Goals Tracker: Power BI dashboard + automatic integration of partner metrics
 
-🏭 Maintenance KPI Dashboard: weekly automated KPI dashboard for factory performance
+🏭 Maintenance KPI Dashboard: weekly KPI dashboard for factory performance
 
 ⚡ Daily Route Check App: internal Power App to log electrical parameters for maintenance
+
+---
+## 📊 GitHub analytics
+
+</p> <p align="center"> <img height="165" src="https://streak-stats.demolab.com/?user=enriquebruno12&theme=tokyonight&hide_border=true" /> </p> <p align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=enriquebruno12&theme=tokyo-night&hide_border=true" /> </p>
+---
