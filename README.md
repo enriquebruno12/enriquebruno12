@@ -64,21 +64,10 @@ flowchart LR
 
 ## ⭐ Featured projects
 
-- 📌 **ccda-data-mining**  
-  Data mining tools/techniques and practice repo  
-  Repo: https://github.com/enriquebruno12/ccda-data-mining
 
 - 🎮 **vgsales-data-project**  
   End-to-end analytics project with VG sales dataset  
   Repo: https://github.com/enriquebruno12/vgsales-data-project
-
-- 🤖 **ccda-applied-machine-learning**  
-  Applied ML notebooks and experiments  
-  Repo: https://github.com/enriquebruno12/ccda-applied-machine-learning
-
-- 🧱 **ccda-bi-and-data-warehousing**  
-  BI + DW modules and deliverables  
-  Repo: https://github.com/enriquebruno12/ccda-bi-and-data-warehousing
 
 ---
 
