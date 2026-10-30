@@ -25,9 +25,9 @@
 
 ## About me
 
-I work across **data analytics, business intelligence and automation**, with a background in **Electrical Engineering** and Data Analytics studies through a Higher Diploma (2025–2026).
+I am a data professional with **3+ years of experience in data integration, analytics and reporting automation** across technology and manufacturing, with a background in **Electrical Engineering** and Data Analytics studies through a Higher Diploma (2025–2026).
 
-My current focus is developing data engineering skills through working portfolio projects: modeling operational data, validating inputs, building ingestion pipelines and making results usable for reporting. My engineering background gives me a particular interest in manufacturing, maintenance and operational performance.
+My experience includes work at **Compass.UOL, Procter & Gamble and Jabil**. My current portfolio focus is data engineering: modeling operational data, validating inputs, building reliable ingestion and making results usable for reporting. Manufacturing and maintenance experience informs the business context behind FactoryPulse.
 
 I value explicit business rules, reproducible environments, useful tests and documentation that explains how the system works.
 
@@ -45,13 +45,19 @@ I value explicit business rules, reproducible environments, useful tests and doc
 
 A personal data engineering portfolio project built around a synthetic manufacturing scenario: **machines, production orders, faults and incremental production events**. I am developing the pipeline in stages, with runnable code and documented design decisions.
 
-**Implemented locally**
+**Engineering practices implemented locally**
 
-- **Operational modeling:** PostgreSQL tables, primary/foreign keys, machine–order integrity, unique source event IDs and an event-derived production summary view.
-- **Event simulation and validation:** a deterministic Python generator, JSONL input checks, timestamp offsets, event types and production-unit rules.
-- **Transactional ingestion:** Psycopg queries resolve business codes to internal IDs and load events within a transaction.
-- **Replay protection:** duplicate source IDs are skipped with `ON CONFLICT`, preserving the existing event.
-- **Verification and documentation:** 16 Python unit tests for selected simulator/reader behaviors, SQL constraint tests, a data dictionary and an event contract.
+| Practice | How I applied it |
+| --- | --- |
+| **Unit testing** | 16 `unittest` cases covering selected simulator and reader behaviors, with positive/negative scenarios, exception assertions and temporary file fixtures. |
+| **Idempotency & deduplication** | A unique source event ID and `ON CONFLICT ... DO NOTHING` prevent duplicate inserts when the same events are replayed. |
+| **Data contract & fail-fast validation** | Check required fields, types, nonblank strings, allowed event types, timezone-aware timestamps and production-unit rules before loading. |
+| **Exception handling & error context** | Raise validation errors with field/line context and preserve parsing causes through exception chaining. |
+| **Parameterized SQL** | Pass business codes and event values separately from SQL for machine/order lookups and inserts. |
+| **Transaction management & atomicity** | Group each file load in one transaction: commit on success, rollback when an exception escapes; report counters after commit. Context managers close cursors and the connection. |
+| **Relational integrity** | Use primary keys, foreign keys (including composite keys), unique constraints and check constraints to protect machine/order relationships and payload rules. |
+| **State machine validation** | Validate `STOPPED`, `RUNNING` and `FAULTED` transitions in the simulator, including strict event ordering. |
+| **Reproducibility & documentation** | Docker Compose, deterministic sample events, version-controlled SQL, separate seeds/tests, a data dictionary and an event contract. |
 
 ```text
 Python simulator → JSONL → Payload validation → ID lookup → PostgreSQL → Summary view
@@ -87,16 +93,41 @@ An academic machine learning project using survey data to model **H1N1 and seaso
 
 **Stack:** Python · pandas · NumPy · scikit-learn · Matplotlib · Seaborn · Jupyter Notebook
 
-## Technologies I use in projects
+## Professional BI & Automation Work
+
+### AWS Goals Tracker · Compass.UOL
+*Business Analyst II · March 2023–March 2025*
+
+**Built:** a Power BI reporting solution for AWS opportunity tracking, automating data extraction, transformation and dashboard refreshes **three times daily**. Translated stakeholder needs into KPI requirements and validated the reporting data.
+
+**Result:** eliminated approximately **2 hours of manual work per week** previously spent on Excel exports and slide preparation.
+
+### Maintenance KPI Dashboard · Procter & Gamble
+*Process Engineer Trainee · July 2022–March 2023*
+
+**Built:** a maintenance KPI dashboard to replace Excel-heavy reviews, alongside automated weekly production-line hardware reporting and manufacturing performance analysis.
+
+**Result:** shortened maintenance review meetings from **3–4 hours to 1 hour or less**—approximately **67–75% less meeting time**.
+
+### Daily Route Check App · Jabil
+*Facilities Analyst · March 2021–July 2022*
+
+**Built:** an internal Power Apps application for electricians to record inspection parameters, with paperless submission and filing of inspection records.
+
+**Result:** reduced inspection rounds from **120 to 45 minutes**—**75 minutes saved per round (62.5%)**. Removing paper forms, scanning and archiving also saved approximately **30 minutes per week**.
+
+*These are professional work examples; the public portfolio repositories above provide code and documentation for my personal and academic projects.*
+
+## Tools & practices across work and portfolio
 
 | Area | Tools and practices |
 | --- | --- |
 | Data ingestion & validation | Python, pandas, Psycopg 3, psycopg2, SQLAlchemy, JSONL/CSV, python-dotenv |
-| Databases & modeling | SQL, PostgreSQL, relational constraints, joins, staging layers, dimensional modeling |
-| Analytics & BI | Power BI, Power Query, DAX, KPI reporting and dashboard design |
+| Databases & modeling | SQL, PostgreSQL, MySQL, relational constraints, joins, staging layers, dimensional modeling |
+| Analytics & BI | Power BI, Power Query, DAX, advanced Excel, KPI reporting and dashboard design |
 | Analysis & machine learning | NumPy, scikit-learn, Matplotlib, Seaborn, Jupyter Notebook; EDA, preprocessing and model evaluation |
 | Automation | Power Platform and Power Apps |
-| Development & verification | Docker Compose, Git/GitHub, unittest, SQL quality checks, DBeaver, VS Code |
+| Development & verification | Docker Compose, Git/GitHub, unit testing with unittest, SQL constraint tests, parameterized queries, transaction management, DBeaver, VS Code |
 
 ## FactoryPulse — planned next stages
 
@@ -108,12 +139,6 @@ The technologies below belong to the **project roadmap**. The current implementa
 | Lakehouse processing | Databricks, PySpark, Delta Lake | Bronze/Silver/Gold datasets and incremental transformations |
 | Analytics & serving | dbt, Power BI; Snowflake in a later stage | Documented analytical models, manufacturing KPIs and dashboards |
 | Delivery & operations | Terraform, GitHub Actions, monitoring and logging | Reproducible infrastructure, automated checks and pipeline observability |
-
-## Additional BI & automation work
-
-- **Maintenance KPI Dashboard:** weekly reporting for factory performance.
-- **Daily Route Check App:** an internal Power App for logging electrical maintenance parameters.
-- **AWS Goals Tracker:** a Power BI dashboard with automated integration of partner metrics.
 
 ## Connect
 
